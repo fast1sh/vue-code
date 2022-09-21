@@ -1,0 +1,27 @@
+@mixin media-before($breakpoint) {
+  $size: map-get($breakpoints, $breakpoint);
+
+  @if ($size==0) {
+    @content;
+  }
+
+  @else {
+    @media screen and (max-width: $size - 1px) {
+      @content;
+    }
+  }
+}
+
+@mixin media-after($breakpoint) {
+  $size: map-get($breakpoints, $breakpoint);
+
+  @if ($size==0) {
+    @content;
+  }
+
+  @else {
+    @media screen and (min-width: $size) {
+      @content;
+    }
+  }
+}

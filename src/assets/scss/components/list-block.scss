@@ -1,0 +1,99 @@
+.list-block {
+  margin-bottom: 64px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @include media-before(lg) {
+    margin-bottom: 56px;
+  }
+
+  @include media-before(sm) {
+    margin-bottom: 40px;
+  }
+}
+
+.list-block--active {
+  margin-top: -24px;
+  max-width: 635px;
+
+  .list-block__list {
+    padding: 14px;
+    background: rgba(3, 131, 123, 0.12);
+    border-radius: 6px;
+  }
+}
+
+.list-block__title {
+  margin-bottom: 24px;
+
+  @include media-before(md) {
+    font-size: 20px;
+  }
+}
+
+.list-block__list {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+
+  li {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 150%;
+    color: #373737;
+    margin-bottom: 16px;
+    padding-left: 40px;
+    position: relative;
+
+    &::before {
+      content: '';
+      width: 24px;
+      height: 24px;
+      background: url(../../assets/images/check-green.svg) center no-repeat;
+      background-size: contain;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+
+      @include media-before(md) {
+        width: 20px;
+        height: 20px;
+      }
+
+      @include media-before(sm) {
+        width: 24px;
+        height: 24px;
+        transform: none;
+        top: 2px;
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    span {
+      font-weight: 600;
+    }
+
+    @include media-before(lg) {
+      margin-bottom: 12px;
+    }
+
+    @include media-before(md) {
+      font-size: 15px;
+      line-height: 130%;
+      margin-bottom: 8px;
+      padding-left: 36px;
+    }
+
+    @include media-before(sm) {
+      padding-left: 40px;
+      font-size: 16px;
+      line-height: 140%;
+    }
+  }
+}

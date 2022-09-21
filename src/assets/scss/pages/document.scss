@@ -1,0 +1,269 @@
+.document {
+  padding-top: 24px;
+  padding-bottom: 121px;
+  background: #FAFAFA;
+
+  @include media-before(sm) {
+    background: #ffffff;
+  }
+}
+
+.document-inner {
+  display: flex;
+  justify-content: space-between;
+
+  @include media-before(md) {
+    flex-direction: column;
+  }
+}
+
+.document-form {
+  width: 445px;
+  padding: 32px;
+  background: #FFFFFF;
+
+  @include media-before(lg) {
+    width: 464px;
+  }
+
+  @include media-before(md) {
+    margin-bottom: 32px;
+  }
+
+  @include media-before(sm) {
+    width: 100%;
+    margin-bottom: 64px;
+    padding: 0;
+  }
+}
+
+.document-form__link-back {
+  margin-bottom: 32px;
+
+  @include media-before(sm) {
+    display: none;
+  }
+}
+
+.document-form__title {
+  margin-bottom: 32px;
+
+  @include media-before(sm) {
+    margin-bottom: 24px;
+    font-size: 28px;
+    line-height: 120%;
+  }
+}
+
+.document-form__check-label {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 140%;
+  margin-bottom: 16px;
+  margin-top: 24px;
+}
+
+.document-form__check-group {
+  .custom-control {
+    margin-bottom: 12px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.document-form__group {
+  margin-bottom: 32px;
+
+  @include media-before(sm) {
+    margin-bottom: 24px;
+  }
+}
+
+.document__btn {
+  width: 100%;
+}
+
+.document-right {
+  width: 633px;
+  height: 410px;
+  background: #F0F3F6;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  @include media-before(lg) {
+    width: 464px;
+    height: 303px;
+  }
+
+  @include media-before(sm) {
+    width: 100%;
+    height: 410px;
+  }
+}
+
+.document-right__checked {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 231px;
+  opacity: 0.6;
+
+  img {
+    margin-bottom: 8px;
+  }
+
+  p {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 140%;
+    text-align: center;
+    letter-spacing: 0.5px;
+    color: #373737;
+  }
+
+  @include media-before(lg) {
+    bottom: 32px;
+  }
+
+  @include media-before(md) {
+    bottom: 40px;
+  }
+}
+
+.document-right__img {
+  @include media-before(lg) {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 109px;
+  }
+
+  @include media-before(md) {
+    width: 44px;
+    top: 80px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  @include media-before(sm) {
+    width: 50px;
+    top: 155px;
+  }
+}
+
+.form-group--disabled {
+  pointer-events: none;
+}
+
+.document-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 32px 20px 20px;
+  background: #FFFFFF;
+  border-radius: 6px;
+  margin-bottom: 4px;
+
+  &:hover {
+    .document-item__right {
+      opacity: 1;
+    }
+  }
+
+  @include media-before(sm) {
+    padding: 16px;
+    background: #F0F3F6;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.document-item__left {
+  position: relative;
+  padding-left: 40px;
+
+  &::before {
+    content: '';
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: contain;
+    background-position: center;
+    background-image: url(../images/document-item.svg);
+  }
+
+  @include media-before(sm) {
+    padding-left: 0;
+    margin-bottom: 16px;
+
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.document-item__right {
+  transition: 0.3s;
+  opacity: 0;
+
+  @include media-before(md) {
+    opacity: 1;
+  }
+}
+
+.document-item__title {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 20px;
+  color: #373737;
+  margin-bottom: 0;
+}
+
+.document-item__text {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 23px;
+  color: #ACACAC;
+}
+
+.document-item__link {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 20px;
+  color: #373737;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: 0.3s;
+
+  &:hover {
+    color: #7F7F7F;
+
+    svg path {
+      fill: #7F7F7F;
+    }
+  }
+
+  svg path {
+    transition: 0.3s;
+  }
+
+  @include media-before(md) {
+    span {
+      display: none;
+    }
+  }
+}

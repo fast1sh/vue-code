@@ -1,0 +1,115 @@
+// var for box shadow of gradient buttons
+// Buttons
+.btn {
+  padding: 18px 32px;
+  background: $primary;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 20px;
+  color: #FFFFFF;
+  transition: 0.3s;
+
+  &:hover {
+    color: #ffffff;
+    background: darken($primary, 5%);
+  }
+
+  // gradient button on hover transition
+  &[class*='bg-gradient-'] {
+    transition: all 0.2s ease;
+    &:hover {
+      transform: translateY(-2px);
+    }
+  }
+
+  &.btn--light {
+    background: rgba(255, 255, 255, 0.2);
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.4);
+    }
+  }
+
+  &.btn--outline {
+    background: #FFFFFF;
+    border: 2px solid #F0F3F6;
+    color: $primary;
+
+    &:hover {
+      background: $primary;
+      border-color: $primary;
+      color: #ffffff;
+    }
+  }
+
+  &.btn--chat {
+    img {
+      margin-right: 8px;
+    }
+  }
+
+  &.btn--gray {
+    background: #F0F3F6;
+    color: #373737;
+    padding: 18px 31px;
+
+    &:hover {
+      background: darken($primary, 5%);
+      color: #ffffff;
+    }
+  }
+
+  // Icon button padding
+  &.btn-icon {
+    padding: 0.715rem 0.736rem;
+  }
+  &.btn-sm {
+    &.btn-icon {
+      padding: 0.5rem;
+      line-height: 0.5;
+    }
+  }
+  &.btn-lg {
+    &.btn-icon {
+      padding: 1rem;
+      line-height: 0.75;
+    }
+  }
+
+  &:focus,
+  &.focus,
+  &:active,
+  &.active {
+    outline: none;
+    box-shadow: none;
+  }
+
+  &:not(:disabled):not(.disabled):active:focus,
+  &:not(:disabled):not(.disabled).active:focus {
+    box-shadow: none !important;
+  }
+
+  // feather icons inside btn
+  .feather {
+    vertical-align: bottom;
+  }
+}
+
+// For Waves Input Padding
+.btn.waves-input-wrapper {
+  padding: 0;
+}
+
+@include media-breakpoint-down(sm) {
+  .btn-sm-block {
+    display: block;
+    width: 100%;
+  }
+}
+
+// Remove cursor-pointer from button if button is disabled
+// * setting it to inherit will auto adept cursor
+.waves-effect {
+  cursor: inherit;
+}

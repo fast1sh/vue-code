@@ -1,0 +1,28 @@
+/*================================================================================
+
+NOTE:
+------
+PLACE HERE YOUR OWN SCSS CODES AND IF NEEDED, OVERRIDE THE STYLES FROM THE OTHER STYLESHEETS.
+WE WILL RELEASE FUTURE UPDATES SO IN ORDER TO NOT OVERWRITE YOUR STYLES IT'S BETTER LIKE THIS.  */
+@import 'components/mixins';
+@import 'variables/variables';
+@import 'components/base';
+@import 'components/fonts';
+@import 'components/header-block';
+@import 'components/hero-block';
+@import 'components/video-block';
+@import 'components/help-block';
+@import 'components/feature-block';
+@import 'components/count-block';
+@import 'components/footer-block';
+@import 'components/modals';
+@import 'components/list-block';
+@import 'components/tabs';
+
+@import 'pages/login';
+@import 'pages/registration';
+@import 'pages/article';
+@import 'pages/document';
+@import 'pages/subscription';
+@import 'pages/contacts';
+@import 'pages/account';
